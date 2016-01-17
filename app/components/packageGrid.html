@@ -1,0 +1,13 @@
+<div class="pkg-grid">
+    <ul v-show="packages" class="pkg-row" v-for="packageRow in packageTable">
+        <!-- package item -->
+        <li class="pkg-item" v-for="package in packageRow">
+            <div>{{ package.score }}</div>
+            <div><a v-link="{ name: 'package', params: { name: package.name }}">{{ package.name }}</a></div>
+            <div>{{ package.desc }}</div>
+        </li>
+    </ul>
+
+    <a v-if="page > 1" v-link="{ name: action, query: { q: query, page: page - 1 }}">Previous page</a>
+    <a v-link="{ name: action, query: { q: query, page: page + 1 }}">Next page</a>
+</div>

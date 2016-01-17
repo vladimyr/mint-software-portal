@@ -1,0 +1,9 @@
+# deps
+#node_modules
+
+# editor stuff
+.idea
+*.sublime-*
+
+# logs
+*.log

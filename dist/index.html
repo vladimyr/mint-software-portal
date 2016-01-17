@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mint software</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mint software center</h1>
+    <div id="app">
+        <a v-link="{ name: 'browse' }">Home</a>
+        <search-box></search-box>
+        <router-view></router-view>
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="col-sm-6 col-sm-offset-3">
+    <h1>{{ $route.params.name }}</h1>
+    <img :src="icon">
+    <span>Score: {{ score }}</span>
+    <span>Reviews: {{ reviewsCount }}</span>
+    <span v-if="website">Website: <a :href="website">{{ website }}</a></span>
+    <span>Size: {{ size }}</span>
+
+    <div class="screenshots" v-for="screenshot in screenshots">
+        <a :href="screenshot.image"><img :src="screenshot.thumbnail"></a>
+    </div>
+
+    <ul class="categories" v-for="category in categories">
+        <li><a :href="category.link">{{ category.name }}</a></li>
+    </ul>
+
+    <ul class="releases" v-for="release in releases">
+        <li><a :href="release.link">{{ release.name }}</a></li>
+    </ul>
+
+    <div class="description">
+        <h2>{{ description.title }}</h2>
+        <p>{{{ description.content }}}</p>
+    </div>
+
+    <ul v-if="reviews" class="reviews" v-for="review in reviews">
+        <li class="review">
+            <div>
+                <a :href="review.creator.profile">
+                    <avatar-view :username="review.creator.name" :url="review.creator.avatar"></avatar-view>
+                </a>
+                <span class="name"><a :href="review.creator.profile">{{ review.creator.name }}</a></span>
+            </div>
+            <div>{{ review.created }}</div>
+            <div>{{ review.rating }}</div>
+            <p>{{{ review.content }}}</p>
+        </li>
+    </ul>
+</div>

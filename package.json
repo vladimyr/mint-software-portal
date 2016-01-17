@@ -1,0 +1,53 @@
+{
+  "name": "mint-software-query",
+  "version": "0.1.0",
+  "description": "Query community.linuxmint.com/software from Node.js",
+  "keywords": [
+    "cli",
+    "cli-app"
+  ],
+  "bin": {
+    "false": "./bin/false.js"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "\"Error: no test specified\" && exit 1",
+    "watch": "watchify app/index.js -t partialify -o dist/bundle.js -v",
+    "serve": "nodemon server.js"
+  },
+  "engines": {
+    "node": "4.2.0"
+  },
+  "homepage": "https://github.com/vladimyr/mint-software-query",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vladimyr/mint-software-query.git"
+  },
+  "author": {
+    "email": "d.vladimyr@gmail.com",
+    "name": "Dario Vladovic",
+    "url": "github.com/vladimyr"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "autocomplete.js": "^0.16.0",
+    "cheerio": "^0.19.0",
+    "cors": "^2.7.1",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "got": "^6.0.2",
+    "helmet": "^1.1.0",
+    "ideal-image-slider": "^1.4.1",
+    "lodash": "^4.0.0",
+    "pinkie-promise": "^2.0.0",
+    "url-join": "0.0.1",
+    "vue": "^1.0.14",
+    "vue-resource": "^0.6.1",
+    "vue-router": "^0.7.8"
+  },
+  "devDependencies": {
+    "locus": "^1.2.0",
+    "partialify": "^3.1.5"
+  }
+}

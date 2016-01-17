@@ -1,0 +1,4 @@
+<img v-if="url" class="avatar" :src="url" alt="{{ username }}'s avatar">
+<div class="avatar default" v-else>
+    {{ username[0] | uppercase }}
+</div>
